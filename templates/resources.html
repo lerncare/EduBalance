@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Resources{% endblock %}
+
+{% block content %}
+<h1>Resource Library</h1>
+<div class="row">
+    {% for resource in resources %}
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ resource.title }}</h5>
+                <p class="card-text">{{ resource.description }}</p>
+                <p><strong>Category:</strong> {{ resource.category }}</p>
+                <a href="{{ resource.url }}" class="btn btn-primary" target="_blank">View Resource</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h1>Welcome to your Dashboard, {{ user.username }}</h1>
+<div class="row">
+    <div class="col-md-8">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2>Your Daily Tip</h2>
+            </div>
+            <div class="card-body">
+                <p class="lead">{{ daily_tip }}</p>
+            </div>
+        </div>
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2>Your Progress</h2>
+            </div>
+            <div class="card-body">
+                <p>Points: {{ user.points }}</p>
+                <h3>Badges:</h3>
+                <ul>
+                    {% for badge in user.badges %}
+                    <li>{{ badge }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h2>Recent Forum Posts</h2>
+            </div>
+            <div class="card-body">
+                {% if recent_posts %}
+                    <ul class="list-unstyled">
+                    {% for post in recent_posts %}
+                        <li class="mb-2">
+                            <a href="{{ url_for('forum.view_post', post_id=post.id) }}">{{ post.title }}</a>
+                            <small class="text-muted d-block">by {{ post.user.username }} on {{ post.created_at.strftime('%Y-%m-%d') }}</small>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>No recent forum posts.</p>
+                {% endif %}
+                <a href="{{ url_for('forum.forum') }}" class="btn btn-primary">View All Posts</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
