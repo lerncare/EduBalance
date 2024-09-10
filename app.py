@@ -1,4 +1,6 @@
-from flask import Flask
+
+from flask import Flask, request
+from flask_babel import Babel
 from config import Config
 from extensions import db, init_extensions
 from models import User
@@ -15,6 +17,13 @@ def create_app():
     # Initialize extensions
     init_extensions(app)
     app.logger.debug("Extensions initialized")
+
+    # Initialize Babel
+    babel = Babel(app)
+
+    @babel.localeselector
+    def get_locale():
+        return request.accept_languages.best_match(['de', 'en'])
 
     # Import and register blueprints
     from routes import auth, main, dashboard, resources, forum

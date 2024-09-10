@@ -1,24 +1,25 @@
+
 {% extends "base.html" %}
 
-{% block title %}Home{% endblock %}
+{% block title %}{{ _('Home') }}{% endblock %}
 
 {% block content %}
 <div class="jumbotron">
-    <h1 class="display-4">Welcome to EduBalance</h1>
-    <p class="lead">EduBalance is an AI-driven platform for teacher well-being and professional development.</p>
+    <h1 class="display-4">{{ _('Welcome to EduBalance') }}</h1>
+    <p class="lead">{{ _('EduBalance is an AI-driven platform for teacher well-being and professional development.') }}</p>
     <hr class="my-4">
-    <p>Our platform offers:</p>
+    <p>{{ _('Our platform offers:') }}</p>
     <ul>
-        <li>Personalized coaching and support</li>
-        <li>Collaborative problem-solving with peers</li>
-        <li>Curated resources for professional development</li>
-        <li>Gamified learning experiences</li>
-        <li>Stress management and well-being tools</li>
+        <li>{{ _('Personalized coaching and support') }}</li>
+        <li>{{ _('Collaborative problem-solving with peers') }}</li>
+        <li>{{ _('Curated resources for professional development') }}</li>
+        <li>{{ _('Gamified learning experiences') }}</li>
+        <li>{{ _('Stress management and well-being tools') }}</li>
     </ul>
     {% if current_user.is_authenticated %}
-    <p>Hello, {{ current_user.username }}! <a href="{{ url_for('dashboard.dashboard') }}" class="btn btn-primary btn-lg">Go to your dashboard</a></p>
+    <p>{{ _('Hello, %(username)s!', username=current_user.username) }} <a href="{{ url_for('dashboard.dashboard') }}" class="btn btn-primary btn-lg">{{ _('Go to your dashboard') }}</a></p>
     {% else %}
-    <p><a href="{{ url_for('auth.login') }}" class="btn btn-primary btn-lg">Login</a> or <a href="{{ url_for('auth.register') }}" class="btn btn-secondary btn-lg">Register</a> to get started.</p>
+    <p><a href="{{ url_for('auth.login') }}" class="btn btn-primary btn-lg">{{ _('Login') }}</a> {{ _('or') }} <a href="{{ url_for('auth.register') }}" class="btn btn-secondary btn-lg">{{ _('Register') }}</a> {{ _('to get started.') }}</p>
     {% endif %}
 </div>
 {% endblock %}

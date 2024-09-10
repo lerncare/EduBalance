@@ -1,0 +1,231 @@
+
+# German translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION
+"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS
+"
+"POT-Creation-Date: 2024-09-10 14:00+0000
+"
+"PO-Revision-Date: 2024-09-10 14:00+0000
+"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>
+"
+"Language: de
+"
+"Language-Team: de <LL@li.org>
+"
+"Plural-Forms: nplurals=2; plural=(n != 1);
+"
+"MIME-Version: 1.0
+"
+"Content-Type: text/plain; charset=utf-8
+"
+"Content-Transfer-Encoding: 8bit
+"
+"Generated-By: Babel 2.12.1
+"
+
+#: templates/base.html:21 templates/index.html:3
+msgid "Home"
+msgstr "Startseite"
+
+#: templates/base.html:25 templates/dashboard.html:3
+msgid "Dashboard"
+msgstr "Übersicht"
+
+#: templates/base.html:28 templates/resources.html:3
+msgid "Resources"
+msgstr "Ressourcen"
+
+#: templates/base.html:31 templates/forum.html:3
+msgid "Forum"
+msgstr "Forum"
+
+#: templates/base.html:34 templates/profile.html:3
+msgid "Profile"
+msgstr "Profil"
+
+#: templates/base.html:37
+msgid "Logout"
+msgstr "Abmelden"
+
+#: templates/base.html:41 templates/login.html:3 templates/login.html:7
+#: templates/login.html:17
+msgid "Login"
+msgstr "Anmelden"
+
+#: templates/base.html:44 templates/register.html:3 templates/register.html:7
+msgid "Register"
+msgstr "Registrieren"
+
+#: templates/dashboard.html:7
+#, python-format
+msgid "Welcome to your Dashboard, %(username)s"
+msgstr "Willkommen in deiner Übersicht, %(username)s"
+
+#: templates/dashboard.html:11
+msgid "Your Daily Tip"
+msgstr "Dein täglicher Tipp"
+
+#: templates/dashboard.html:18
+msgid "Your Progress"
+msgstr "Dein Fortschritt"
+
+#: templates/dashboard.html:21
+#, python-format
+msgid "Points: %(points)s"
+msgstr "Punkte: %(points)s"
+
+#: templates/dashboard.html:22 templates/profile.html:10
+msgid "Badges:"
+msgstr "Abzeichen:"
+
+#: templates/dashboard.html:33
+msgid "Recent Forum Posts"
+msgstr "Neueste Forenbeiträge"
+
+#: templates/dashboard.html:40
+#, python-format
+msgid "by %(username)s on %(date)s"
+msgstr "von %(username)s am %(date)s"
+
+#: templates/dashboard.html:45
+msgid "No recent forum posts."
+msgstr "Keine neuen Forenbeiträge."
+
+#: templates/dashboard.html:47
+msgid "View All Posts"
+msgstr "Alle Beiträge anzeigen"
+
+#: templates/forum.html:7
+msgid "Community Forum"
+msgstr "Community-Forum"
+
+#: templates/forum.html:8
+msgid "Create New Post"
+msgstr "Neuen Beitrag erstellen"
+
+#: templates/index.html:7
+msgid "Welcome to EduBalance"
+msgstr "Willkommen bei EduBalance"
+
+#: templates/index.html:8
+msgid "EduBalance is an AI-driven platform for teacher well-being and professional development."
+msgstr "EduBalance ist eine KI-gestützte Plattform für das Wohlbefinden und die berufliche Entwicklung von Lehrern."
+
+#: templates/index.html:10
+msgid "Our platform offers:"
+msgstr "Unsere Plattform bietet:"
+
+#: templates/index.html:12
+msgid "Personalized coaching and support"
+msgstr "Personalisiertes Coaching und Unterstützung"
+
+#: templates/index.html:13
+msgid "Collaborative problem-solving with peers"
+msgstr "Kollaborative Problemlösung mit Kollegen"
+
+#: templates/index.html:14
+msgid "Curated resources for professional development"
+msgstr "Kuratierte Ressourcen für die berufliche Entwicklung"
+
+#: templates/index.html:15
+msgid "Gamified learning experiences"
+msgstr "Gamifizierte Lernerfahrungen"
+
+#: templates/index.html:16
+msgid "Stress management and well-being tools"
+msgstr "Stressmanagement- und Wellness-Tools"
+
+#: templates/index.html:19
+#, python-format
+msgid "Hello, %(username)s!"
+msgstr "Hallo, %(username)s!"
+
+#: templates/index.html:19
+msgid "Go to your dashboard"
+msgstr "Gehe zu deiner Übersicht"
+
+#: templates/index.html:21
+msgid "or"
+msgstr "oder"
+
+#: templates/index.html:21
+msgid "to get started."
+msgstr "um loszulegen."
+
+#: templates/login.html:11
+msgid "Username"
+msgstr "Benutzername"
+
+#: templates/login.html:15
+msgid "Password"
+msgstr "Passwort"
+
+#: templates/login.html:19
+msgid "New user?"
+msgstr "Neuer Benutzer?"
+
+#: templates/login.html:19
+msgid "Click to Register"
+msgstr "Klicken Sie hier, um sich zu registrieren"
+
+#: templates/new_post.html:3
+msgid "New Forum Post"
+msgstr "Neuer Forenbeitrag"
+
+#: templates/new_post.html:7
+msgid "Create a New Forum Post"
+msgstr "Erstellen Sie einen neuen Forenbeitrag"
+
+#: templates/new_post.html:10
+msgid "Title"
+msgstr "Titel"
+
+#: templates/new_post.html:14
+msgid "Content"
+msgstr "Inhalt"
+
+#: templates/new_post.html:17
+msgid "Submit Post"
+msgstr "Beitrag absenden"
+
+#: templates/profile.html:7
+#, python-format
+msgid "%(username)s's Profile"
+msgstr "Profil von %(username)s"
+
+#: templates/profile.html:9
+#, python-format
+msgid "Email: %(email)s"
+msgstr "E-Mail: %(email)s"
+
+#: templates/register.html:11
+msgid "Email"
+msgstr "E-Mail"
+
+#: templates/register.html:19
+msgid "Already have an account?"
+msgstr "Haben Sie bereits ein Konto?"
+
+#: templates/register.html:19
+msgid "Click to Login"
+msgstr "Klicken Sie hier, um sich anzumelden"
+
+#: templates/resources.html:7
+msgid "Resource Library"
+msgstr "Ressourcenbibliothek"
+
+#: templates/resources.html:14
+msgid "Category:"
+msgstr "Kategorie:"
+
+#: templates/resources.html:15
+msgid "View Resource"
+msgstr "Ressource anzeigen"
