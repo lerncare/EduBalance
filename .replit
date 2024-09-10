@@ -15,6 +15,22 @@ author = "agent"
 task = "workflow.run"
 args = "Run Flask App"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Check Git Status"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Check Git Remote"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Git Add"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Git Commit"
+
 [[workflows.workflow]]
 name = "Run Flask App"
 author = "agent"
@@ -26,6 +42,50 @@ agentRequireRestartOnSave = false
 task = "shell.exec"
 args = "python app.py"
 waitForPort = 5000
+
+[[workflows.workflow]]
+name = "Check Git Status"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "git status"
+
+[[workflows.workflow]]
+name = "Check Git Remote"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "git remote -v"
+
+[[workflows.workflow]]
+name = "Git Add"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "git add ."
+
+[[workflows.workflow]]
+name = "Git Commit"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "git commit -am 'Update .replit file'"
 
 [deployment]
 run = ["sh", "-c", "python app.py"]
