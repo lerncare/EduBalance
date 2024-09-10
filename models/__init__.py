@@ -1,11 +1,8 @@
-from flask_sqlalchemy import SQLAlchemy
+from extensions import db
 
-db = SQLAlchemy()
-
-# Import models after db is defined
+# Import models
 from .user import User
 from .resource import Resource
 from .forum import ForumPost
 
-# Make db and models available at the package level
 __all__ = ['db', 'User', 'Resource', 'ForumPost']

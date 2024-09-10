@@ -1,31 +1,47 @@
 from flask import Flask
-from flask_login import LoginManager
 from config import Config
-from models import db, User
-
-login_manager = LoginManager()
+from extensions import db, init_extensions
+from models import User
+import logging
 
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
+    
+    # Set up logging
+    logging.basicConfig(level=logging.DEBUG)
+    app.logger.setLevel(logging.DEBUG)
 
-    db.init_app(app)
-    login_manager.init_app(app)
-    login_manager.login_view = 'auth.login'
+    # Initialize extensions
+    init_extensions(app)
+    app.logger.debug("Extensions initialized")
 
-    with app.app_context():
-        db.create_all()
-
-        @login_manager.user_loader
-        def load_user(user_id):
-            return User.query.get(int(user_id))
-
+    # Import and register blueprints
     from routes import auth, main, dashboard, resources, forum
     app.register_blueprint(auth.bp)
     app.register_blueprint(main.bp)
     app.register_blueprint(dashboard.bp)
     app.register_blueprint(resources.bp)
     app.register_blueprint(forum.bp)
+    app.logger.debug("Blueprints registered")
+
+    # Create tables and test user within app context
+    with app.app_context():
+        app.logger.debug("Creating database tables")
+        db.create_all()
+        app.logger.debug("Database tables created")
+
+        # Create test user if it doesn't exist
+        test_user = User.query.filter_by(username='testuser').first()
+        if not test_user:
+            app.logger.debug("Creating test user")
+            test_user = User(username='testuser', email='testuser@example.com')
+            test_user.set_password('testpassword123')
+            db.session.add(test_user)
+            db.session.commit()
+            app.logger.debug("Test user created")
+        else:
+            app.logger.debug("Test user already exists")
 
     return app
 
