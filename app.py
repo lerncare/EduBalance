@@ -1,4 +1,3 @@
-
 from flask import Flask, request
 from flask_babel import Babel
 from config import Config
@@ -23,7 +22,7 @@ def create_app():
 
     @babel.localeselector
     def get_locale():
-        return request.accept_languages.best_match(['de', 'en'])
+        return 'de'  # Set German as the default language
 
     # Import and register blueprints
     from routes import auth, main, dashboard, resources, forum
