@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-09-10 15:34+0000\n"
-"PO-Revision-Date: 2024-09-10 14:30+0000\n"
+"POT-Creation-Date: 2024-09-10 16:30+0000\n"
+"PO-Revision-Date: 2024-09-10 16:30+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
 "Language-Team: de <LL@li.org>\n"
@@ -18,99 +18,129 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
 
-#~ msgid "Home"
-#~ msgstr "Startseite"
+#: templates/base.html:21 templates/index.html:4
+msgid "Home"
+msgstr "Startseite"
 
-#~ msgid "Dashboard"
-#~ msgstr "Dashboard"
+#: templates/base.html:25
+msgid "Dashboard"
+msgstr "Dashboard"
 
-#~ msgid "Resources"
-#~ msgstr "Ressourcen"
+#: templates/base.html:28
+msgid "Resources"
+msgstr "Ressourcen"
 
-#~ msgid "Forum"
-#~ msgstr "Forum"
+#: templates/base.html:31
+msgid "Forum"
+msgstr "Forum"
 
-#~ msgid "Profile"
-#~ msgstr "Profil"
+#: templates/base.html:34
+msgid "Profile"
+msgstr "Profil"
 
-#~ msgid "Logout"
-#~ msgstr "Abmelden"
+#: templates/base.html:37
+msgid "Logout"
+msgstr "Abmelden"
 
-#~ msgid "Login"
-#~ msgstr "Anmelden"
+#: templates/base.html:41 templates/index.html:22
+msgid "Login"
+msgstr "Anmelden"
 
-#~ msgid "Register"
-#~ msgstr "Registrieren"
+#: templates/base.html:44 templates/index.html:22 templates/register.html:4
+#: templates/register.html:7 templates/register.html:21
+msgid "Register"
+msgstr "Registrieren"
 
-#~ msgid "Welcome to EduBalance"
-#~ msgstr "Willkommen bei EduBalance"
+#: templates/index.html:8
+msgid "Welcome to EduBalance"
+msgstr "Willkommen bei EduBalance"
 
-#~ msgid ""
-#~ "EduBalance is an AI-driven platform "
-#~ "for teacher well-being and professional"
-#~ " development."
-#~ msgstr ""
-#~ "EduBalance ist eine KI-gestützte "
-#~ "Plattform für das Wohlbefinden und die"
-#~ " berufliche Entwicklung von Lehrern."
+#: templates/index.html:9
+msgid ""
+"EduBalance is an AI-driven platform for teacher well-being and "
+"professional development."
+msgstr ""
+"EduBalance ist eine KI-gestützte Plattform für das Wohlbefinden und die "
+"berufliche Entwicklung von Lehrern."
 
-#~ msgid "Our platform offers:"
-#~ msgstr "Unsere Plattform bietet:"
+#: templates/index.html:11
+msgid "Our platform offers:"
+msgstr "Unsere Plattform bietet:"
 
-#~ msgid "Personalized coaching and support"
-#~ msgstr "Personalisiertes Coaching und Unterstützung"
+#: templates/index.html:13
+msgid "Personalized coaching and support"
+msgstr "Personalisiertes Coaching und Unterstützung"
 
-#~ msgid "Collaborative problem-solving with peers"
-#~ msgstr "Kollaboratives Problemlösen mit Kollegen"
+#: templates/index.html:14
+msgid "Collaborative problem-solving with peers"
+msgstr "Kollaboratives Problemlösen mit Kollegen"
 
-#~ msgid "Curated resources for professional development"
-#~ msgstr "Kuratierte Ressourcen für die berufliche Entwicklung"
+#: templates/index.html:15
+msgid "Curated resources for professional development"
+msgstr "Kuratierte Ressourcen für die berufliche Entwicklung"
 
-#~ msgid "Gamified learning experiences"
-#~ msgstr "Gamifizierte Lernerfahrungen"
+#: templates/index.html:16
+msgid "Gamified learning experiences"
+msgstr "Gamifizierte Lernerfahrungen"
 
-#~ msgid "Stress management and well-being tools"
-#~ msgstr "Stressmanagement- und Wellness-Tools"
+#: templates/index.html:17
+msgid "Stress management and well-being tools"
+msgstr "Stressmanagement- und Wellness-Tools"
 
-#~ msgid "Hello, %(username)s!"
-#~ msgstr "Hallo, %(username)s!"
+#: templates/index.html:20
+#, python-format
+msgid "Hello, %(username)s!"
+msgstr "Hallo, %(username)s!"
 
-#~ msgid "Go to your dashboard"
-#~ msgstr "Zu Ihrem Dashboard"
+#: templates/index.html:20
+msgid "Go to your dashboard"
+msgstr "Zum Dashboard"
 
-#~ msgid "or"
-#~ msgstr "oder"
+#: templates/index.html:22
+msgid "or"
+msgstr "oder"
 
-#~ msgid "to get started."
-#~ msgstr "um loszulegen."
+#: templates/index.html:22
+msgid "to get started."
+msgstr "um loszulegen."
 
-#~ msgid "Username"
-#~ msgstr "Benutzername"
+#: templates/new_post.html:4
+msgid "New Forum Post"
+msgstr "Neuer Forumsbeitrag"
 
-#~ msgid "Email"
-#~ msgstr "E-Mail"
+#: templates/new_post.html:7
+msgid "Create a New Forum Post"
+msgstr "Neuen Forumsbeitrag erstellen"
 
-#~ msgid "Password"
-#~ msgstr "Passwort"
+#: templates/new_post.html:10
+msgid "Title"
+msgstr "Titel"
 
-#~ msgid "Already have an account?"
-#~ msgstr "Haben Sie bereits ein Konto?"
+#: templates/new_post.html:14
+msgid "Content"
+msgstr "Inhalt"
 
-#~ msgid "Click to Login"
-#~ msgstr "Klicken Sie hier zum Anmelden"
+#: templates/new_post.html:17
+msgid "Submit Post"
+msgstr "Beitrag absenden"
 
-#~ msgid "New Forum Post"
-#~ msgstr "Neuer Forumsbeitrag"
+#: templates/register.html:10
+msgid "Username"
+msgstr "Benutzername"
 
-#~ msgid "Create a New Forum Post"
-#~ msgstr "Erstellen Sie einen neuen Forumsbeitrag"
+#: templates/register.html:14
+msgid "Email"
+msgstr "E-Mail"
 
-#~ msgid "Title"
-#~ msgstr "Titel"
+#: templates/register.html:18
+msgid "Password"
+msgstr "Passwort"
 
-#~ msgid "Content"
-#~ msgstr "Inhalt"
+#: templates/register.html:23
+msgid "Already have an account?"
+msgstr "Haben Sie bereits ein Konto?"
 
-#~ msgid "Submit Post"
-#~ msgstr "Beitrag veröffentlichen"
+#: templates/register.html:23
+msgid "Click to Login"
+msgstr "Zum Anmelden klicken"
 

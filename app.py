@@ -1,5 +1,5 @@
 from flask import Flask, request
-from flask_babel import Babel
+from flask_babel import Babel, _
 from config import Config
 from extensions import db, init_extensions
 from models import User
@@ -21,8 +21,14 @@ def create_app():
     app.logger.debug("Extensions initialized")
 
     # Initialize Babel
-    babel = Babel()
+    babel = Babel(app)
+    app.config['BABEL_DEFAULT_LOCALE'] = 'de'
+    app.config['BABEL_SUPPORTED_LOCALES'] = ['en', 'de']
     babel.init_app(app, locale_selector=get_locale)
+
+    # Add get_locale and _ to Jinja2 environment
+    app.jinja_env.globals['get_locale'] = get_locale
+    app.jinja_env.globals['_'] = _
 
     # Import and register blueprints
     from routes import auth, main, dashboard, resources, forum

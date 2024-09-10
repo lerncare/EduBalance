@@ -1,0 +1,69 @@
+1. Install Dependencies
+Ensure you have Flask-Babel and Flask installed:
+
+bash
+Code kopieren
+pip install Flask Flask-Babel
+2. Configure Flask-Babel in Your Application
+In your Flask app configuration, you need to ensure Flask-Babel is properly initialized and integrated into the Jinja2 environment.
+
+Here’s an example of how you can set it up:
+
+app.py (Flask app setup)
+python
+Code kopieren
+from flask import Flask, render_template
+from flask_babel import Babel, get_locale
+
+app = Flask(__name__)
+
+# Configuration for Babel
+app.config['BABEL_DEFAULT_LOCALE'] = 'en'
+app.config['BABEL_SUPPORTED_LOCALES'] = ['en', 'fr']
+
+babel = Babel(app)
+
+# Babel locale selector (optional, if you want to customize locale selection)
+@babel.localeselector
+def get_locale():
+    # You can choose how the locale is determined. For instance, from user request or default.
+    # Example: return request.accept_languages.best_match(['en', 'fr'])
+    return 'en'
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
+Jinja2 Template
+In your base.html or index.html templates, you can use the get_locale() function like this:
+
+html
+Code kopieren
+<!DOCTYPE html>
+<html lang="{{ get_locale() }}">
+<head>
+    <title>Flask-Babel Example</title>
+</head>
+<body>
+    <h1>Welcome to Flask-Babel!</h1>
+</body>
+</html>
+3. Check Extensions in Jinja2
+It seems like there might be an issue with your Jinja2 extensions. Starting with Jinja2 v3.1.0, some extensions like jinja2.ext.autoescape have been removed. Therefore, you should update your configuration to use autoescaping without manually specifying this extension.
+
+In your app.py, ensure you don't add jinja2.ext.autoescape manually:
+
+python
+Code kopieren
+# Not required anymore
+# app.jinja_env.add_extension('jinja2.ext.autoescape')
+4. Ensure Flask-Babel Integration
+Make sure Flask-Babel is properly linked to your app context by ensuring you have this line:
+
+python
+Code kopieren
+babel = Babel(app)
+Debugging Tip
+If the error persists, add some logging or print statements inside get_locale() to see whether it's being called correctly.
