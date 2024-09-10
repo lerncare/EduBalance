@@ -74,20 +74,23 @@ dotenv = ["python-dotenv"]
 
 [[package]]
 name = "flask-babel"
-version = "3.1.0"
-description = "Adds i18n/l10n support for Flask applications."
+version = "2.0.0"
+description = "Adds i18n/l10n support to Flask applications"
 optional = false
-python-versions = ">=3.7,<4.0"
+python-versions = "*"
 files = [
-    {file = "flask_babel-3.1.0-py3-none-any.whl", hash = "sha256:deb3ee272d5adf97f5974ed09ab501243d63e7fb4a047501a00de4bd4aca4830"},
-    {file = "flask_babel-3.1.0.tar.gz", hash = "sha256:be015772c5d7f046f3b99c508dcf618636eb93d21b713b356db79f3e79f69f39"},
+    {file = "Flask-Babel-2.0.0.tar.gz", hash = "sha256:f9faf45cdb2e1a32ea2ec14403587d4295108f35017a7821a2b1acb8cfd9257d"},
+    {file = "Flask_Babel-2.0.0-py3-none-any.whl", hash = "sha256:e6820a052a8d344e178cdd36dd4bb8aea09b4bda3d5f9fa9f008df2c7f2f5468"},
 ]
 
 [package.dependencies]
-Babel = ">=2.12"
-Flask = ">=2.0"
-Jinja2 = ">=3.1"
-pytz = ">=2022.7"
+Babel = ">=2.3"
+Flask = "*"
+Jinja2 = ">=2.5"
+pytz = "*"
+
+[package.extras]
+dev = ["Pallets-Sphinx-Themes", "bumpversion", "ghp-import", "pytest", "pytest-mock", "sphinx"]
 
 [[package]]
 name = "flask-login"
@@ -676,4 +679,4 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "3464870799d93c5f3ee8477beb06147efb6f6d35b6b4528e27d36cc54aa4e43d"
+content-hash = "7c47fa3f5a628c8a7ac1bb50fc3ab2b37568cd5137b7c4c5b58bf4a12916be68"
