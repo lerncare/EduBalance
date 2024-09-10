@@ -25,3 +25,9 @@ instance/
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# Replit specific
+.replit
+replit.nix
+poetry.lock
+pyproject.toml
