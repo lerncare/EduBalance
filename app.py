@@ -5,6 +5,9 @@ from extensions import db, init_extensions
 from models import User
 import logging
 
+def get_locale():
+    return request.accept_languages.best_match(['en', 'de']) or 'de'
+
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
@@ -18,11 +21,8 @@ def create_app():
     app.logger.debug("Extensions initialized")
 
     # Initialize Babel
-    babel = Babel(app)
-
-    @babel.localeselector
-    def get_locale():
-        return 'de'  # Set German as the default language
+    babel = Babel()
+    babel.init_app(app, locale_selector=get_locale)
 
     # Import and register blueprints
     from routes import auth, main, dashboard, resources, forum

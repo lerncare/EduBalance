@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-09-10 13:26+0000\n"
-"PO-Revision-Date: 2024-09-10 13:26+0000\n"
+"POT-Creation-Date: 2024-09-10 15:33+0000\n"
+"PO-Revision-Date: 2024-09-10 14:30+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
 "Language-Team: de <LL@li.org>\n"
@@ -17,4 +17,100 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
+
+#~ msgid "Home"
+#~ msgstr "Startseite"
+
+#~ msgid "Dashboard"
+#~ msgstr "Dashboard"
+
+#~ msgid "Resources"
+#~ msgstr "Ressourcen"
+
+#~ msgid "Forum"
+#~ msgstr "Forum"
+
+#~ msgid "Profile"
+#~ msgstr "Profil"
+
+#~ msgid "Logout"
+#~ msgstr "Abmelden"
+
+#~ msgid "Login"
+#~ msgstr "Anmelden"
+
+#~ msgid "Register"
+#~ msgstr "Registrieren"
+
+#~ msgid "Welcome to EduBalance"
+#~ msgstr "Willkommen bei EduBalance"
+
+#~ msgid ""
+#~ "EduBalance is an AI-driven platform "
+#~ "for teacher well-being and professional"
+#~ " development."
+#~ msgstr ""
+#~ "EduBalance ist eine KI-gestützte "
+#~ "Plattform für das Wohlbefinden und die"
+#~ " berufliche Entwicklung von Lehrern."
+
+#~ msgid "Our platform offers:"
+#~ msgstr "Unsere Plattform bietet:"
+
+#~ msgid "Personalized coaching and support"
+#~ msgstr "Personalisiertes Coaching und Unterstützung"
+
+#~ msgid "Collaborative problem-solving with peers"
+#~ msgstr "Kollaboratives Problemlösen mit Kollegen"
+
+#~ msgid "Curated resources for professional development"
+#~ msgstr "Kuratierte Ressourcen für die berufliche Entwicklung"
+
+#~ msgid "Gamified learning experiences"
+#~ msgstr "Gamifizierte Lernerfahrungen"
+
+#~ msgid "Stress management and well-being tools"
+#~ msgstr "Stressmanagement- und Wellness-Tools"
+
+#~ msgid "Hello, %(username)s!"
+#~ msgstr "Hallo, %(username)s!"
+
+#~ msgid "Go to your dashboard"
+#~ msgstr "Zu Ihrem Dashboard"
+
+#~ msgid "or"
+#~ msgstr "oder"
+
+#~ msgid "to get started."
+#~ msgstr "um loszulegen."
+
+#~ msgid "Username"
+#~ msgstr "Benutzername"
+
+#~ msgid "Email"
+#~ msgstr "E-Mail"
+
+#~ msgid "Password"
+#~ msgstr "Passwort"
+
+#~ msgid "Already have an account?"
+#~ msgstr "Haben Sie bereits ein Konto?"
+
+#~ msgid "Click to Login"
+#~ msgstr "Klicken Sie hier zum Anmelden"
+
+#~ msgid "New Forum Post"
+#~ msgstr "Neuer Forumsbeitrag"
+
+#~ msgid "Create a New Forum Post"
+#~ msgstr "Erstellen Sie einen neuen Forumsbeitrag"
+
+#~ msgid "Title"
+#~ msgstr "Titel"
+
+#~ msgid "Content"
+#~ msgstr "Inhalt"
+
+#~ msgid "Submit Post"
+#~ msgstr "Beitrag veröffentlichen"
 
