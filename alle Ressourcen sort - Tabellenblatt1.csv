@@ -1,0 +1,40 @@
+Kennziffer,Ressource,Beschreibung,Bereich
+R1,Priorisierung,Identifizierung von Schlüsselzielen und Fokussierung auf das Wesentliche,Arbeitsbelastung
+R2,Wiederverwendbare Materialien,Erstellung langfristig nutzbarer Lehrmaterialien,Arbeitsbelastung
+R3,Zeitmanagement,"Optimierung der Zeitplanung und Akzeptanz von ""gut genug""","Arbeitsbelastung, Zeitdruck"
+R4,Kollegiale Unterstützung,Austausch von Ideen und Materialien mit Kollegen,"Arbeitsbelastung, Große Klassen"
+R5,Technologische Hilfsmittel,"Nutzung digitaler Tools für Planung, Bewertung und Kommunikation","Arbeitsbelastung, Große Klassen, Administrativer Druck"
+R6,Kleingruppenarbeit,Bildung von Kleingruppen für differenziertes Lernen,Große Klassen
+R7,Team-Teaching,Gemeinsame Unterrichtsgestaltung mit Kollegen,Große Klassen
+R8,Differenzierte Aufgabenstellungen,Integration verschiedener Schwierigkeitsstufen und Lernmethoden,Große Klassen
+R9,Effizientes Klassenmanagement,Entwicklung klarer Strukturen und Routinen,Große Klassen
+R10,Positive Verstärkung,Anerkennung und Belohnung positiven Verhaltens,Herausforderndes Verhalten
+R11,Klare und konsistente Regeln,Aufstellung und konsequente Anwendung verständlicher Regeln,Herausforderndes Verhalten
+R12,Deeskalationstechniken,Erlernen von Techniken zur Konfliktlösung,Herausforderndes Verhalten
+R13,Unterstützung durch Fachpersonal,"Zusammenarbeit mit Heilpädagogen, Schulpsychologen etc.",Herausforderndes Verhalten
+R14,Selbstreflexion und Resilienz,Regelmäßige Reflexion des eigenen Verhaltens,Herausforderndes Verhalten
+R15,Präventive Maßnahmen,Entwicklung von Strategien zur Verhaltensprävention,Herausforderndes Verhalten
+R16,Administrative Unterstützung,Kommunikation mit Schulleitung über administrative Herausforderungen,Administrativer Druck
+R17,Automatisierung,Einsatz von Software für Routineaufgaben,Administrativer Druck
+R18,Effiziente Kommunikation,Etablierung klarer Kommunikationswege,"Administrativer Druck, Elterninteraktionen"
+R19,Delegieren,Übertragung von Aufgaben an unterstützendes Personal,Administrativer Druck
+R20,Selbstfürsorge,Einplanung regelmäßiger Pausen und Erholungszeiten,"Administrativer Druck, Zeitdruck"
+R21,Engagement in Verbänden,Beteiligung in Lehrpersonen-Vereinigungen,Administrativer Druck
+R22,Flexible Stundenpläne,Gestaltung flexiblerer Arbeitszeiten,Zeitdruck
+R23,Kooperative Arbeitsteilung,Zusammenarbeit und Austausch mit Kollegen,Zeitdruck
+R24,Proaktive Planung,Vorbereitung von Unterrichtseinheiten im Voraus,Zeitdruck
+R25,Offenheit und Empathie,Verständnisvoller Umgang mit Elternanliegen,Elterninteraktionen
+R26,Lösungsorientierter Ansatz,Fokussierung auf gemeinsame Ziele und Lösungen,Elterninteraktionen
+R27,Regelmäßige Updates,Durchführung von Elterngesprächen und Erstellung von Berichten,Elterninteraktionen
+R28,Positives Feedback,Regelmäßige positive Rückmeldungen an Eltern,Elterninteraktionen
+R29,Protokollierung,Dokumentation wichtiger Gespräche und Absprachen,Elterninteraktionen
+R30,Kommunikations-Schulungen,Teilnahme an Schulungen zur Gesprächsführung,Elterninteraktionen
+R31,Realistische Zielsetzungen,Festlegung erreichbarer Ziele für Schülerleistungen,Hohe Erwartungen
+R32,Förderung der Selbstbewertung,Ermutigung zur Selbsteinschätzung bei Schülern,Hohe Erwartungen
+R33,Alternative Bewertungsmethoden,Einsatz vielfältiger Bewertungsformen,Hohe Erwartungen
+R34,Berufliche Weiterentwicklung,Engagement für kontinuierliche Fortbildung,"Hohe Erwartungen, Fehlende Unterstützung"
+R35,Mentoring-Programme,Einführung von Betreuungsprogrammen für Lehrpersonen,Fehlende Unterstützung
+R36,Berufliche Netzwerke,Nutzung von Netzwerken zum Wissensaustausch,Fehlende Unterstützung
+R37,Individuelle Entwicklungsziele,Erstellung persönlicher Entwicklungspläne,Fehlende Unterstützung
+R38,Selbstgesteuertes Lernen,Eigeninitiative beim Erwerb neuer Kenntnisse,Fehlende Unterstützung
+R39,Feedbackkultur,Aktives Einholen von Rückmeldungen,Fehlende Unterstützung

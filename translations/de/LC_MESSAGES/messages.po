@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-09-10 16:30+0000\n"
+"POT-Creation-Date: 2024-09-18 21:26+0000\n"
 "PO-Revision-Date: 2024-09-10 16:30+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
@@ -18,35 +18,40 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
 
-#: templates/base.html:21 templates/index.html:4
+#: templates/base.html:20 templates/index.html:4
 msgid "Home"
 msgstr "Startseite"
 
-#: templates/base.html:25
+#: templates/base.html:24
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#: templates/base.html:28
+#: templates/base.html:27
 msgid "Resources"
 msgstr "Ressourcen"
 
-#: templates/base.html:31
+#: templates/base.html:30 templates/interactive_resources.html:3
+#, fuzzy
+msgid "Interactive Resources"
+msgstr "Ressourcen"
+
+#: templates/base.html:33
 msgid "Forum"
 msgstr "Forum"
 
-#: templates/base.html:34
+#: templates/base.html:36
 msgid "Profile"
 msgstr "Profil"
 
-#: templates/base.html:37
+#: templates/base.html:39
 msgid "Logout"
 msgstr "Abmelden"
 
-#: templates/base.html:41 templates/index.html:22
+#: templates/base.html:43 templates/index.html:22
 msgid "Login"
 msgstr "Anmelden"
 
-#: templates/base.html:44 templates/index.html:22 templates/register.html:4
+#: templates/base.html:46 templates/index.html:22 templates/register.html:4
 #: templates/register.html:7 templates/register.html:21
 msgid "Register"
 msgstr "Registrieren"
@@ -104,6 +109,53 @@ msgstr "oder"
 msgid "to get started."
 msgstr "um loszulegen."
 
+#: templates/interactive_resources.html:6
+msgid "Interactive Resource Library"
+msgstr ""
+
+#: templates/interactive_resources.html:11
+msgid "Your Progress"
+msgstr ""
+
+#: templates/interactive_resources.html:12
+#: templates/interactive_resources.html:51
+msgid "Points"
+msgstr ""
+
+#: templates/interactive_resources.html:22
+msgid "Achievements"
+msgstr ""
+
+#: templates/interactive_resources.html:34
+#, fuzzy
+msgid "Leaderboard"
+msgstr "Dashboard"
+
+#: templates/interactive_resources.html:50
+msgid "Category"
+msgstr ""
+
+#: templates/interactive_resources.html:52
+#, fuzzy
+msgid "View Resource"
+msgstr "Ressourcen"
+
+#: templates/interactive_resources.html:53
+msgid "Mark as Completed"
+msgstr ""
+
+#: templates/interactive_resources.html:77
+msgid "Completed"
+msgstr ""
+
+#: templates/interactive_resources.html:81
+msgid "Congratulations! You earned"
+msgstr ""
+
+#: templates/interactive_resources.html:81
+msgid "points!"
+msgstr ""
+
 #: templates/new_post.html:4
 msgid "New Forum Post"
 msgstr "Neuer Forumsbeitrag"
@@ -143,4 +195,7 @@ msgstr "Haben Sie bereits ein Konto?"
 #: templates/register.html:23
 msgid "Click to Login"
 msgstr "Zum Anmelden klicken"
+
+#~ msgid "Congratulations! You earned 10 points!"
+#~ msgstr ""
 

@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('Interactive Resources') }}{% endblock %}
+
+{% block content %}
+<h1>{{ _('Interactive Resource Library') }}</h1>
+<div class="row mb-4">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ _('Your Progress') }}</h5>
+                <p>{{ _('Points') }}: <span id="points-value">{{ current_user.points }}</span></p>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: {{ (current_user.points / 1000) * 100 }}%;" aria-valuenow="{{ current_user.points }}" aria-valuemin="0" aria-valuemax="1000">{{ current_user.points }} / 1000</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ _('Achievements') }}</h5>
+                <ul class="list-group" id="achievements-list">
+                    {% for badge in current_user.badges %}
+                    <li class="list-group-item">{{ badge }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ _('Leaderboard') }}</h5>
+                <ul class="list-group" id="leaderboard">
+                    <!-- Leaderboard will be populated dynamically -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" id="resource-list">
+    {% for resource in resources %}
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ resource.title }}</h5>
+                <p class="card-text">{{ resource.description }}</p>
+                <p><strong>{{ _('Category') }}:</strong> {{ resource.category }}</p>
+                <p><strong>{{ _('Points') }}:</strong> {{ resource.points }}</p>
+                <a href="{{ resource.url }}" class="btn btn-primary" target="_blank">{{ _('View Resource') }}</a>
+                <button class="btn btn-success complete-resource" data-resource-id="{{ resource.id }}">{{ _('Mark as Completed') }}</button>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const completeButtons = document.querySelectorAll('.complete-resource');
+    completeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const resourceId = this.getAttribute('data-resource-id');
+            fetch('/complete-resource', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `resource_id=${resourceId}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    this.disabled = true;
+                    this.textContent = '{{ _('Completed') }}';
+                    document.getElementById('points-value').textContent = data.points;
+                    updateProgress(data.points);
+                    updateAchievements(data.badges);
+                    alert(`{{ _('Congratulations! You earned') }} ${data.earned_points} {{ _('points!') }}`);
+                    fetchLeaderboard();
+                }
+            });
+        });
+    });
+
+    function updateProgress(points) {
+        const progressBar = document.querySelector('.progress-bar');
+        const percentage = (points / 1000) * 100;
+        progressBar.style.width = `${percentage}%`;
+        progressBar.setAttribute('aria-valuenow', points);
+        progressBar.textContent = `${points} / 1000`;
+    }
+
+    function updateAchievements(badges) {
+        const achievementsList = document.getElementById('achievements-list');
+        achievementsList.innerHTML = badges.map(badge => `<li class="list-group-item">${badge}</li>`).join('');
+    }
+
+    function fetchLeaderboard() {
+        fetch('/leaderboard')
+            .then(response => response.json())
+            .then(data => {
+                const leaderboardList = document.getElementById('leaderboard');
+                leaderboardList.innerHTML = data.map((user, index) => 
+                    `<li class="list-group-item">${index + 1}. ${user.username} - ${user.points} points</li>`
+                ).join('');
+            });
+    }
+
+    // Initial leaderboard fetch
+    fetchLeaderboard();
+});
+</script>
+{% endblock %}

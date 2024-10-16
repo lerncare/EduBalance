@@ -6,3 +6,4 @@ class Resource(db.Model):
     description = db.Column(db.Text, nullable=False)
     category = db.Column(db.String(50), nullable=False)
     url = db.Column(db.String(200), nullable=False)
+    points = db.Column(db.Integer, default=10)  # Add points column

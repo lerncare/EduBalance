@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-09-10 16:30+0000\n"
+"POT-Creation-Date: 2024-09-18 21:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,35 +17,39 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
 
-#: templates/base.html:21 templates/index.html:4
+#: templates/base.html:20 templates/index.html:4
 msgid "Home"
 msgstr ""
 
-#: templates/base.html:25
+#: templates/base.html:24
 msgid "Dashboard"
 msgstr ""
 
-#: templates/base.html:28
+#: templates/base.html:27
 msgid "Resources"
 msgstr ""
 
-#: templates/base.html:31
+#: templates/base.html:30 templates/interactive_resources.html:3
+msgid "Interactive Resources"
+msgstr ""
+
+#: templates/base.html:33
 msgid "Forum"
 msgstr ""
 
-#: templates/base.html:34
+#: templates/base.html:36
 msgid "Profile"
 msgstr ""
 
-#: templates/base.html:37
+#: templates/base.html:39
 msgid "Logout"
 msgstr ""
 
-#: templates/base.html:41 templates/index.html:22
+#: templates/base.html:43 templates/index.html:22
 msgid "Login"
 msgstr ""
 
-#: templates/base.html:44 templates/index.html:22 templates/register.html:4
+#: templates/base.html:46 templates/index.html:22 templates/register.html:4
 #: templates/register.html:7 templates/register.html:21
 msgid "Register"
 msgstr ""
@@ -99,6 +103,51 @@ msgstr ""
 
 #: templates/index.html:22
 msgid "to get started."
+msgstr ""
+
+#: templates/interactive_resources.html:6
+msgid "Interactive Resource Library"
+msgstr ""
+
+#: templates/interactive_resources.html:11
+msgid "Your Progress"
+msgstr ""
+
+#: templates/interactive_resources.html:12
+#: templates/interactive_resources.html:51
+msgid "Points"
+msgstr ""
+
+#: templates/interactive_resources.html:22
+msgid "Achievements"
+msgstr ""
+
+#: templates/interactive_resources.html:34
+msgid "Leaderboard"
+msgstr ""
+
+#: templates/interactive_resources.html:50
+msgid "Category"
+msgstr ""
+
+#: templates/interactive_resources.html:52
+msgid "View Resource"
+msgstr ""
+
+#: templates/interactive_resources.html:53
+msgid "Mark as Completed"
+msgstr ""
+
+#: templates/interactive_resources.html:77
+msgid "Completed"
+msgstr ""
+
+#: templates/interactive_resources.html:81
+msgid "Congratulations! You earned"
+msgstr ""
+
+#: templates/interactive_resources.html:81
+msgid "points!"
 msgstr ""
 
 #: templates/new_post.html:4
